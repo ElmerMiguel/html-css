@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera Web</title>
+</head>
+
+<body>
+
+    <!-- ul lista no ordenada -->
+     <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+     </ul>
+
+      <!-- ol lista  ordenada -->
+      <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>
+            <!-- lista anidada-->
+            <ol>
+                <!-- style es para el tipo de enmueracion, este caso incisos-->
+                <li style="list-style-type: lower-alpha;">sub Elemento 1</li>
+                <li style="list-style-type: lower-alpha;">sub Elemento 2</li>
+                <li style="list-style-type: lower-alpha;">sub Elemento 3</li>
+                <li style="list-style-type: lower-alpha;">sub Elemento 4</li>
+        </li>
+     </ol>
+
+    <!--Formularios-->
+    <form action = "/formulario" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" value="chanchito" id="nombre" name="nombre"  placeholder="chancito feliz..."/>
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" value="Feliz" name="apellido" id="apellido" placeholder="ingrese apellido"/>
+        <br> 
+        <!--Cometarios o textos-->
+        <label for="comentario">Comentario</label>
+        <br>
+        <textarea rows="10" cols="50" name="comentario" id="comentario" placeholder="ingrese un comentario" >Defecto</textarea>
+        <!--
+            Para formulario se puede tener diferentes tipos:
+
+            - email
+            - password
+            - radio
+            - checkbox
+            - file
+            - text
+        -->
+
+
+        <br>
+        <!--Boton de envio, envia todo al servidor
+        <input type="submit"/>
+        -->
+        
+        <!--Aunque es mejor usarlo con tipo boton-->
+        <button type="button"> <img src="./img/coffee.png" width="20" alt=""> tipo boton</button>
+        <button type="reset">tipo reset</button>
+        <button type="submit">tipo enviar</button>
+
+    
+
+        
+    </form>
+
+    <hr>
+
+    <h1>Mi primer heading, 'Titulo, cabecera'</h1>
+    <h2>Segundo heading - 'subtitulo, subcabecera'</h2>
+    <h3>Tercer heading</h3>
+    <h4>cuarto heading</h4>
+    <h5>quinto heading</h5>
+    <h6>Sexto heading</h6>
+
+    <p>Chancito feliz</p>
+    <p>Chanchito triste</p>
+
+    <hr>
+
+    <h2>Chancito felipe</h2>
+    <p>Este texto es <span style="color: blue;">mucho mas largo</span> 
+        y es para mostrar <br> <br>
+        la etiqueta span!
+    </p>
+    <!-- Este es un comentario-->
+    
+    <!-- hipervinculo-->
+    <a target="_blank"  href="https://www.google.com/">Ir a google</a>
+
+    <br>
+    
+    <!-- Imagen-->
+    <img src="./img/coffee.png" alt="coffe" height="200" width=""/>    
+
+    <hr>
+
+    <form >
+        <label for="formulario">Probando formulario</label>
+        <input type="submit" id="formulario" name="formulario" placeholder="ingrese algo"/> 
+
+    </form>
+ 
+
+   
+
+
+    
+
+</body>
+</html>
