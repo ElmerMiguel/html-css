@@ -164,8 +164,6 @@ Cual es mas seguro, pues lo seguro es usar certificados que se encargan de encri
 
 Se hace con `value` en el input `value="valor defecto"`, a dicerencia de text area que se coloca en `<textarea> valor por defecto </textarea>`.
 
-
-
 ```html
  <!--Formularios-->
     <form action = "/formulario" method="POST">
@@ -179,11 +177,11 @@ Se hace con `value` en el input `value="valor defecto"`, a dicerencia de text ar
         <label for="comentario">Comentario</label>
         <br>
         <textarea rows="10" cols="50" name="comentario" id="comentario" placeholder="ingrese un comentario" >Defecto</textarea>
-     
+
         <br>
         <!--Boton de envio, envia todo al servidor-->
         <input type="submit"/>
-  
+
     </form>
 ```
 
@@ -236,4 +234,270 @@ Ej. iniciar de contar desde 50:
                 <li style="list-style-type: lower-alpha;">sub Elemento 4</li>
         </li>
      </ol>
+```
+
+- --
+
+# Tablas
+
+Se divide en filas y columnas, cada una de estas columnas va a tener una cabecera y un pie.
+
+- **Etiqueta** `<table>`: Define el inicio y el fin de la tabla.
+
+- **Etiqueta** `<tr>`: Define una fila de la tabla.
+
+- **Etiqueta** `<th>`:Se utiliza para definir una celda de encabezado en una tabla, dentro de una fila (`<tr>`).
+
+- **Etiqueta** `<td>`: Define una celda en una fila.
+
+- El `border="1"`: Agrega un borde de grosor 1 a la tabla.
+
+```html
+<!-- tabla -->
+     <table border="1" style="width: 500px;">
+
+        <!-- cabecera de la tabla -->
+        <thead> 
+            <tr> <!-- table row, fila dentro de la tabla -->
+                <th>Prodcuto</th> <!-- cabecera -->
+                <th>Precio</th>
+            </tr>
+        </thead>
+
+        <!-- cuerpo de la tabla -->
+        <tbody> 
+            <tr>
+                <td>Hola beats</td> <!-- table data, celda de la tabla , elementos estandares-->
+                <td>gratis</td>
+            </tr>
+            <tr>
+                <td>Chancito feliz</td>
+                <td>Q19.90</td>
+            </tr>
+            <tr>
+                <td>Chancito triste</td>
+                <td>Q29.90</td>
+            </tr>
+        </tbody>
+
+        <!-- pie de la tabla -->
+        <tfoot> 
+            <tr>
+                <td></td>
+                <td>Total : Q49.90</td>
+            </tr>
+
+        </tfoot>
+     </table>
+```
+
+Para una mejor organizacion para nuestra tabla se usa: 
+
+- El `<thead>`: Para indicar el encabezado, (titulos, th)
+
+- El `<tbody>`: Para agrupar el cuerpo de la tabla, (filas, td)
+
+- El `<tfoot>`: Para indicar el pie de la pagina.
+
+tambien podemos darle el borde con css en el head con:
+
+```css
+  <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+```
+
+- --
+
+## header
+
+Se utiliza para poder agrupar links, tambien alguna imagen o logo, se puede crear cuantas etiquetas `header` se quiera, simpre y cuando que cumpla dos reglas:
+
+- No podemos colocar una etiqueta de `header` dentro de otra etiqueta `header`.
+
+- No podemos colocar una etiqueta de `header` dentro de una etiqueta de `footer`
+
+## main
+
+Es el contenido principal de la pagina
+
+## Section
+
+Nos sirve para definir secciones de la app, y dentro de las secciones de la app podemos colocar las etiquetas que queramos.
+
+## footer
+
+Se utiliza para colocar el pie de pagina de nuestra pagina web, pueden contener coopyright, informacion de contacto, informacion de sitio o como navbegar dentro del sitio, informacion del autor.
+
+### articule
+
+Nos sirve para dividir o identificar que hay articulos. 
+
+- --
+
+# Div
+
+Tine la misma funcionalidad de la etiqueta section, se utiliza para poder dividir nuestro contenido, tambien para agruparlo en secciones.
+
+### `<div>`:
+
+- **Propósito**: Es como una caja genérica que puedes usar para agrupar cosas en tu página web.
+
+- **Uso**: Utilízalo cuando necesites un contenedor sin un propósito específico, solo para aplicar estilos o manejar con JavaScript.
+
+### `<section>`:
+
+- **Propósito**: Es una caja especial para agrupar contenido que está relacionado temáticamente.
+
+- **Uso**: Úsalo cuando el contenido dentro tenga un tema o propósito claro y específico.
+
+### Resumen:
+
+- `<div>`: Caja genérica para todo tipo de contenido.
+
+- `<section>`: Caja temática para contenido relacionado.
+
+```html
+<!-- div -->
+<div>
+    <p>Este es un párrafo.</p>
+    <img src="imagen.jpg" alt="Una imagen">
+</div>
+
+<!-- section -->
+<section>
+    <h2>Sobre Nosotros</h2>
+    <p>Información acerca de nuestra empresa.</p>
+</section>
+```
+
+- --
+
+# Atributos id y class
+
+Van a existir momentos donde nosotros vamos a querer dar un identificador unico o generico a nuestras etiquetas de html, para interactuar con ellos con javascript, o asignarle algun estilo con css.
+
+## Diferencias entre los atributos `id` y `class`, y cuándo usar cada uno:
+
+### `id`:
+
+- **Propósito**: Identificar un único elemento en la página.
+
+- **Uso**: Debe ser único dentro del documento HTML, es decir, solo un elemento puede tener ese `id`.
+
+- **Ejemplo**:
+  
+  ```html
+  <div id="header">Encabezado</div>
+  ```
+
+- **Cuándo usarlo**: Cuando necesitas identificar un solo elemento para aplicar estilos CSS específicos o manipularlo con JavaScript.
+
+### `class`:
+
+- **Propósito**: Agrupar múltiples elementos bajo una misma clase para aplicar estilos comunes.
+
+- **Uso**: Puedes usar la misma clase en varios elementos.
+
+- **Ejemplo**:
+  
+  ```html
+  <div class="card">Tarjeta 1</div>
+  <div class="card">Tarjeta 2</div>
+  ```
+
+- **Cuándo usarlo**: Cuando necesitas aplicar los mismos estilos a varios elementos o seleccionarlos con JavaScript de manera colectiva.
+
+### Entonces:
+
+- **`id`**: 
+  - Único para un solo elemento.
+  - Útil para identificar y estilizar un elemento específico.
+- **`class`**:
+  - Puede ser compartido por múltiples elementos.
+  - Útil para aplicar estilos comunes a varios elementos.
+
+### ejemplo
+
+¡Claro! Aquí tienes ejemplos prácticos del uso de `id` y `class`:
+
+### `id`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #header {
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <h1>Bienvenido a Mi Sitio Web</h1>
+</div>
+
+<p>Este es el contenido de la página.</p>
+
+</body>
+</html>
+```
+
+- **Explicación**: En este ejemplo, el `id` "header" se aplica a un solo elemento `<div>`, y el estilo se define en CSS para aplicarse únicamente a este elemento.
+
+### `class`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Tarjeta 1</h2>
+    <p>Contenido de la primera tarjeta.</p>
+</div>
+
+<div class="card">
+    <h2>Tarjeta 2</h2>
+    <p>Contenido de la segunda tarjeta.</p>
+</div>
+
+<div class="card">
+    <h2>Tarjeta 3</h2>
+    <p>Contenido de la tercera tarjeta.</p>
+</div>
+
+</body>
+</html>
+```
+
+- **Explicación**: Aquí, la clase "card" se aplica a múltiples elementos `<div>`, y el estilo CSS definido para `.card` se aplica a todos estos elementos, proporcionando un estilo consistente.
+
+<br>
+
+Estos atributos nos sirven para que despues con css o javascript, utilizando los selectores podamos seleccionar los elementos. 
+
+- --
+
+# Links, redireccion dentro de la misma pagina
+
+Para direccionarnos dentro de una parte especifica de la pagina web se hace con `<a> </a>` pero utilizando los `id`, es decir que con un link podemos llevar exactamente al usuario a cierta etiqueta.
+
+```html
+<a href="#header">Ir al comienzo</a>
 ```
