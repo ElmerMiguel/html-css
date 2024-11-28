@@ -1,0 +1,22 @@
+#titulo {
+    color: aqua;
+}
+
+p.especial {
+    color: green;
+}
+
+
+p.texto {
+    color: red;
+}
+
+
+
+.otroTexto {
+    color: blue;
+}
+
+ p {
+    color: yellow;
+}
